@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert, Image, ActivityIndicator } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as DocumentPicker from 'expo-document-picker';
+import * as MediaLibrary from 'expo-media-library';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
@@ -89,12 +90,9 @@ function SubmissionScreen({ navigation }) {
                 copyToCacheDirectory: true,
             });
 
-            console.log("DocumentPicker Response:", result);
-
             if (!result.canceled) {
-                const fileUri = result.assets[0].uri;
+                const fileUri = result.uri;
                 setFileUri(fileUri);
-                console.log("Selected file URI:", fileUri);
             } else {
                 console.log("No file was selected");
             }
@@ -229,6 +227,7 @@ const styles = StyleSheet.create({
     },
     media: {
         width: '100%',
+        // height: 200,
         aspectRatio: 1 / 1,
         marginVertical: 10,
     },

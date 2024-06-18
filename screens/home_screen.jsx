@@ -7,23 +7,23 @@ import { getFirestore, collection, getDocs, doc, updateDoc } from 'firebase/fire
 const HomeScreen = ({ navigation }) => {
     const [competitions, setCompetitions] = useState([]);
 
-    // useLayoutEffect(() => {
-    //     navigation.setOptions(customHeaderOptions);
-    // }, [navigation]);
-
-
     useLayoutEffect(() => {
-        navigation.setOptions({
-            ...customHeaderOptions,
-            headerRight: () => (
-                <Button
-                    onPress={handleLogout}
-                    title="Sign Out"
-                    color="#000"
-                />
-            ),
-        });
+        navigation.setOptions(customHeaderOptions);
     }, [navigation]);
+
+
+    // useLayoutEffect(() => {
+    //     navigation.setOptions({
+    //         ...customHeaderOptions,
+    //         headerRight: () => (
+    //             <Button
+    //                 onPress={handleLogout}
+    //                 title="Sign Out"
+    //                 color="#000"
+    //             />
+    //         ),
+    //     });
+    // }, [navigation]);
 
 
     useEffect(() => {

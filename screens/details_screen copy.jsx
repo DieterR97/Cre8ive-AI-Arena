@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react';
-import { View, Text, Image, StyleSheet, Modal, TouchableWithoutFeedback, ActivityIndicator, ImageBackground, Button } from 'react-native';
+import { View, Text, Image, StyleSheet, Modal, TouchableWithoutFeedback, ActivityIndicator, ImageBackground } from 'react-native';
 import { Video } from 'expo-av';
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 import { customHeaderOptions2 } from '../utilities/headerUtils2.js';
 
@@ -10,7 +10,6 @@ const DetailsScreen = ({ route, navigation }) => {
     const [user, setUser] = useState(null);
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [isVideoLoading, setIsVideoLoading] = useState(true);
-    const [voteCount, setVoteCount] = useState(item.voteCount); // Initialize voteCount
 
     useLayoutEffect(() => {
         navigation.setOptions(customHeaderOptions2);
@@ -26,17 +25,6 @@ const DetailsScreen = ({ route, navigation }) => {
         };
         fetchUserData();
     }, [item.userId]);
-
-    const handleVote = async (direction) => {
-        try {
-            const newVoteCount = direction === 'up' ? voteCount + 1 : voteCount - 1;
-            setVoteCount(newVoteCount);  // Update the state immediately
-            const itemRef = doc(db, `submissions/${item.category}/${item.category}`, item.id);
-            await updateDoc(itemRef, { voteCount: newVoteCount });  // Update Firestore
-        } catch (error) {
-            console.error('Error updating vote count: ', error);
-        }
-    };
 
     const handleFullScreen = () => {
         setIsModalVisible(true);
@@ -94,17 +82,13 @@ const DetailsScreen = ({ route, navigation }) => {
             <Text style={styles.description}>{item.description}</Text>
             <Text style={styles.timestamp}>{formatTimestamp(item.timestamp)}</Text>
             <Text style={styles.status}>{item.status}</Text>
-            <View style={styles.voteContainer}>
-                <Button title="Upvote" onPress={() => handleVote('up')} />
-                <Text style={styles.voteCount}>{voteCount}</Text>
-                <Button title="Downvote" onPress={() => handleVote('down')} />
-            </View>
             {user && (
                 <View style={styles.userContainer}>
                     <Text style={styles.userInfo}>Uploaded by: {user.name} {user.surname}</Text>
                     <Text style={styles.userEmail}>Email: {user.email}</Text>
                 </View>
             )}
+
             <Modal visible={isModalVisible} transparent={true}>
                 <TouchableWithoutFeedback onPress={handleModalClose}>
                     <View style={styles.modalContainer}>
@@ -137,6 +121,7 @@ const styles = StyleSheet.create({
     },
     image: {
         width: '100%',
+        // height: 300,
         aspectRatio: 1 / 1,
         borderRadius: 10,
     },
@@ -160,15 +145,6 @@ const styles = StyleSheet.create({
     status: {
         fontSize: 14,
         color: 'red',
-    },
-    voteContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginVertical: 10,
-    },
-    voteCount: {
-        fontSize: 18,
-        marginHorizontal: 10,
     },
     userContainer: {
         marginTop: 20,
@@ -206,12 +182,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#f0f0f0',
-        padding: 10,
+        padding: 10
     },
     aud_txt: {
         fontSize: 24,
         marginLeft: 140,
-        fontWeight: '500',
+        fontWeight: '500'
     },
     imageBackground: {
         width: '100%',

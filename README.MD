@@ -33,7 +33,6 @@
   - [Wireframes](#wireframes)
   - [User-flow](#user-flow)
 - [Development Process](#development-process)
-  - [Implementation Process](#implementation-process)
     - [Highlights](#highlights)
     - [Challenges](#challenges)
   - [Future Implementation](#peer-reviews)
@@ -158,40 +157,28 @@ Users can see their own past submissions.
 
 ![MOODBOARD](https://pomf2.lain.la/f/txgfnzx.png)
 
-
-### UI Designs
-
-
-
 <!-- DEVELOPMENT PROCESS -->
 
 ## Development Process
 
-### Implementation Process
-
-- Used `bootstrap` for the responsiveness and layout of site.
-- `PostgreSQL` used as backend with `pgAdmin 4`.
-- `bcrypt` used for hashing passwords.
-
 #### Highlights
 
-- Users can register and log in.
-- Users can have an overview of all 3 settlements as well as view them individually.
-- Users can craft components.
-- Users can buy and sell items.
-- Users can ship between settlements.
-- Admin can adjust the value of items.
+- Users can enter a competition with their submission.
+- Users can see all the other submissions on one screen or individually for each competition type.
+- Users can see winners leaderboard which includes past winners of the individual competitions.
+- Users can register with the app and log in. Users can also log out.
+- Users can view individual submissions wheter it is audio, video or an image.
+- Users can see their own past submissions.
 
 #### Challenges
 
-- Getting the crafting functionality to work.
-- Having correct relations and joining of tables.
-- Some styling aspects created challenges.
-- Frontend of login/registering posed a challenge.
+- Getting the voting to work.
+- Having it able to upload large images, audio and video through IOS.
+- Enabling Lazy loading.
 
 ### Future Implementation
 
-- With a day or two extra we would be able to implement all the required functionality.
+- For future I will implement all the required functionality as well as refine the visual aesthetic of the app.
 
 ## Final Outcome
 
@@ -199,14 +186,13 @@ Users can see their own past submissions.
 
 To see a run through of the application, click below:
 
-[View Demonstration](https://drive.google.com/drive/folders/1Zo9QAXI-6R0UXaZAqg8gofJj_h5Y_J0f?usp=sharing)
+[View Demonstration](https://drive.google.com/file/d/1LdXp8pGGiSAe7IyxhhsxW9oV95_gdZkW/view?usp=drive_link)
 
 <!-- AUTHORS -->
 
 ## Authors
 
 - **Dieter Roelofse** - [DieterR97](https://github.com/DieterR97)
-- **Ruan Jordaan** - [JugheadStudio](https://github.com/JugheadStudio)
 
 <!-- LICENSE -->
 

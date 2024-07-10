@@ -145,7 +145,7 @@ Users can see their own past submissions.
 
 ### CLIENT CONCEPTUALISATION
 
-![CLIENTCONCEPTUALISATION1](https://raw.githubusercontent.com/DieterR97/Cre8ive-AI-Arena/main/Concept%20Process/A)%20CLIENT%20CONCEPTUALISATION%20page%201.png)
+![CLIENTCONCEPTUALISATION1](https://github.com/DieterR97/Cre8ive-AI-Arena/blob/main/Concept%20Process/A)%20CLIENT%20CONCEPTUALISATION%20page%201.png?raw=true)
 
 
 ### UI Designs

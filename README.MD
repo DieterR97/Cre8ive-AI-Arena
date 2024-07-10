@@ -145,23 +145,21 @@ Users can see their own past submissions.
 
 ### CLIENT CONCEPTUALISATION
 
-![c](https://pomf2.lain.la/f/936n6jnn.png)
+![CLIENT CONCEPTUALISATION1](https://pomf2.lain.la/f/936n6jnn.png)
+
+![CLIENT CONCEPTUALISATION2](https://pomf2.lain.la/f/fv2opu0w.png)
+
+
+### DATA PLANNING
+
+![DATA PLANNING](https://pomf2.lain.la/f/hrgtnc8.png)
+
+### MOODBOARD
+
+![MOODBOARD](https://pomf2.lain.la/f/txgfnzx.png)
 
 
 ### UI Designs
-
-![Login](https://github.com/JugheadStudio/Fallout-Forge-Frontend/assets/113913471/9f3f08b0-29b8-446b-a84b-2edf9b6d9227)
-
-![Settlements](https://github.com/JugheadStudio/Fallout-Forge-Frontend/assets/113913471/05da59f4-3f08-419c-a30b-e193a8770517)
-
-![Settlement Dashboard](https://github.com/JugheadStudio/Fallout-Forge-Frontend/assets/113913471/746bb07f-b230-4684-9837-cbcaf02e2809)
-
-
-### User-flows
-
-![DV 301 Planning week 2_Page_5](https://github.com/JugheadStudio/Fallout-Forge-Frontend/assets/113913471/ad35f8d9-d287-48e8-95f3-9099b8f3f0be)
-
-![DV 301 Planning week 2_Page_4](https://github.com/JugheadStudio/Fallout-Forge-Frontend/assets/113913471/6ed1b41c-8a6b-49e5-b775-d780f9fd9227)
 
 
 
